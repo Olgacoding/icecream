@@ -1,0 +1,1191 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+a{
+    color:inherit;
+    text-decoration: none;
+}
+.title{
+    text-align: center;
+}
+body{
+    font-family: 'Quicksand', sans-serif;
+    /* font-family: 'Waiting for the Sunrise', cursive; */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color:#9A9A9A;
+}
+.container{
+    max-width:1180px;
+    padding: 0;
+    width:98%;
+    margin: 0 auto;
+}
+
+/* ============== HEADER ================ */
+.top__header .container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+}
+.left__nav-list,
+.right__nav-list{
+    display: flex;
+    font-size: 18px;
+    line-height: 22px;
+    color: #433840;
+}
+.left__nav-item .active{
+    color: #87CEEB;
+}
+.left__nav-item,
+.right__nav-item{
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.left__nav-item::after{
+    content:"";
+    bottom: 0;
+    left: 0;
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #87CEEB;
+    margin: auto;
+    transition: width .3s ease-out;
+}
+.right__nav-item::after{
+    content:"";
+    bottom: 0;
+    left: 0;
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #87CEEB;
+    margin: auto;
+    transition: width .3s ease-out;
+}
+.left__nav-item:hover::after,
+.right__nav-item:hover::after{
+    width: 100%;
+}
+.left__nav-link,
+.right__nav-link{
+    color: inherit;
+}
+.left__nav-link:hover,
+.right__nav-link:hover{
+    color: #87CEEB;
+    transition: all 0.3s ease-in-out;
+}
+.logo{
+    text-align: center;
+}
+.logo__text{
+    font-family: 'Quicksand', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    letter-spacing: 5px;
+    color: #fff;
+    text-shadow: #000 0px 0px 1px;
+    -webkit-font-smoothing: antialiased;
+    cursor:pointer;
+}
+
+/* ============== SLIDER ============== */
+.slider{
+    position: relative;
+}
+.slider .slick-prev{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    z-index: 99;
+    width: 22px;
+    height: 69px;
+    background: transparent url(../images/left.svg) center center no-repeat;
+    border: 0;
+    padding: 0;
+    margin-top: -35px;
+}
+.slider .slick-next{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    z-index: 99;
+    width: 22px;
+    height: 69px;
+    background: transparent url(../images/right.svg) center center no-repeat;
+    border: 0;
+    padding: 0;
+    margin-top: -35px;
+}
+.slide__img{
+    max-width: 100%;
+    height: auto;
+}
+.svg_style{
+    position: relative;
+}
+.svg_style::before{
+    content:"";
+    width: 100%;
+    height: 130px;
+    background: url(../images/top.svg) center center no-repeat;
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+.svg_style::after{
+    content:"";
+    width: 100%;
+    height: 110px;
+    background: url(../images/bottom.svg) center center no-repeat;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+}
+.slide__figure{
+    position: relative;
+    margin: 0;
+}
+.slide__figcaption{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.title__one{
+    font-family: Waiting for the Sunrise;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 180px;
+    line-height: 180px;
+    color: #EE82EE;
+    position: absolute;
+    top: 27%;
+    right: 16%; 
+    transform: rotate(360deg);
+}
+.title__two{
+    font-family: Waiting for the Sunrise;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 170px;
+    line-height: 170px;
+    letter-spacing: 5px;
+    color: #FFFFFF;
+    position: absolute;
+    left: 6%;
+    top:52%;
+    transform: rotate(16deg);
+}
+.title__three{
+    font-family: Waiting for the Sunrise;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: 10px;
+    color:#433640;
+    position: absolute;
+    left: 64%;
+    top: 56%;
+    transform: rotate(70deg);
+}
+
+/* ============== OPTION ============ */
+.choice{
+    background: url(../images/home__about.png) center center no-repeat;
+    background-size: contain;
+}
+.box{
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 60px;
+}
+.option__content:first-child{
+    padding-left: 10px;
+    padding-right: 45px;
+}
+.option__content:last-child{
+    padding-left: 45px;
+    padding-right: 10px;
+}
+.option__content article{
+    margin-bottom: 80px;
+}
+.option__content article:last-child{
+    margin-bottom: 0;
+}
+.option__content-title{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 37px;
+    color: #433840;
+    margin-bottom: 12px;
+    white-space:nowrap;
+}
+
+.option__content-text{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 24px;
+    color: #9A9A9A;
+}
+
+/* ============== HOME__SHOP ============== */
+.home__shop{
+    margin-top: 160px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.pricing__tables-title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 50px;
+    color: #433840;
+    margin-bottom: 10px;
+}
+.pricing__tables-subtitle{
+    font-family: Waiting for the Sunrise;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 50px;
+    color: #FF1493;  
+    display: block;
+    margin-bottom: 60px;
+}
+.shop__inner{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+.shop__product{
+    width:calc(25% - 15px);
+    margin-bottom: 20px;
+    text-align: center;
+}
+.shop__thumbnail{
+    margin-bottom: 27px;
+    position:relative;
+    overflow: hidden;
+}
+.add_to_cart{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 150%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+}
+.shop__thumbnail:hover .add_to_cart{
+    top:0;
+    transition: all .3s ease-in-out;
+}
+.thumbnail__img-link{
+    display: inline-block;
+    background: #00CED1;
+    border-radius: 5px;
+    padding: 20px 25px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: 3px;
+    color: #FFFFFF;
+}
+.thumbnail__img-link:hover{
+    background: #40E0D0;
+}
+.thumbnail__img{
+    border-radius: 5px;
+}
+.shop__title{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #433840;
+    margin-bottom: 20px;
+}
+.shop__title a:hover{
+    opacity:0.7;
+    transition: all .5s ease-in-out;
+}
+.shop__price{
+    font-family: Waiting for the Sunrise;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 25px;
+    color: #FF1493;
+}
+
+/* ============== HOME__SUBSCRIBE =============== */
+.home__subscribe .container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.col__left,
+.col__right{
+    width: calc(50% - 35px);
+    margin-top: 0;
+    margin-bottom: 0;
+    z-index: 9;
+}
+.home__subscribe{
+    background: #E6E6FA;
+    margin-top: 100px;
+    padding-top: 110px;
+    padding-bottom: 120px;
+}
+.col__left-thumbnail{
+    margin-bottom: 0;
+    margin-top: -100px;
+}
+.col__right{
+    margin-bottom: 50px;
+}
+.col__right-title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 50px;
+    color: #FFFFFF;
+    text-align: left;
+    margin-bottom: 10px;
+
+}
+.col__right-subtitle{
+    font-family: Waiting for the Sunrise;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 50px;
+    color: #FF1493;
+    text-align: left;
+    display: block;
+    margin-bottom: 21px;
+}
+.subscribe{
+    display: flex;
+    align-items: center;
+}
+.subscribe__email{
+    display: inline;
+    background: #FFFFFF;
+    border: 3px solid #FEE9EF;
+    border-radius: 5px;
+    padding-left: 20px;
+    height: 54px;
+    line-height: 54;
+    border:none;
+    outline:none;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: #9A9A9A;
+    width: 100%;
+}
+.subscribe__email:focus{
+    border: 3px solid #1E90FF;
+}
+.subscribe__email::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #9A9A9A;
+}
+.subscribe__email::-moz-placeholder { /* Firefox 19+ */
+    color: #9A9A9A;
+}
+.subscribe__email:-ms-input-placeholder { /* IE 10+ */
+    color: #9A9A9A;
+}
+.subscribe__email:-moz-placeholder { /* Firefox 18- */
+    color: #9A9A9A;
+}
+.subscribe__submit{
+    background: #1E90FF;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #FFFFFF;
+    padding: 0px 45px;
+    height: 60px;
+    border:none;
+    outline:none;
+    margin-left: 25px;
+}
+.subscribe__submit:hover{
+    background: #00CED1;
+}
+
+/* ============== BLOG ============== */
+.home__blog{
+    margin-top: 60px;
+    padding-bottom: 31px;
+
+}
+.home__blog-title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 50px;
+    color: #433840;
+    margin-bottom: 10px;
+}
+.home__blog-subtitle{
+    font-family: Waiting for the Sunrise;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 50px;
+    color: #FF1493;
+    display: block;
+    margin-bottom: 37px;
+}
+.blog__archive{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 74px;
+    margin-bottom: 12px;  
+}
+.post{
+    width: calc(33.3% - 13.3px);
+    margin-bottom: 51px; 
+    display: flex;
+    flex-direction: column;
+}
+.post__thumbnail{
+    position: relative;
+    margin-bottom: 29px;
+}
+.post__image{
+    border-radius: 5px;
+    max-width:100%;
+    height: auto;
+}
+.post__date{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    background: #DDA0DD;
+    height: 40px;
+    line-height: 40px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    color: #FFFFFF;
+    padding: 0 15px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.post__title{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFFFFF;
+    background: #FF1493;
+    /* display: inline-block; */
+    padding: 5px 13px;
+    transition: all 300ms ease-in-out;
+    margin-bottom: 20px;
+}
+.post__title:hover{
+    background: #DDA0DD;
+    transition: all 300ms ease-in-out;
+}
+
+.post__text{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    color: #C4C4C4;
+    margin-bottom: 13px;
+    flex: 1 1 auto;
+}
+.post:nth-child(even) .post__title{
+    background: #1E90FF;
+}
+.post:nth-child(even) .post__title:hover{
+    background: #DDA0DD;
+    transition: all 300ms ease-in-out;
+}
+.info__line{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    color: #433840;
+}
+.info__line-link{
+    color: #FF1493;
+}
+
+/* ============== OUR__MENU ============== */
+.our__menu{
+    padding-top: 120px;
+    padding-bottom: 120px;
+    margin-bottom: 40px;
+    background:#4169E1;
+}
+.ourmenu-title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 50px;   
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+.ourmenu-subtitle{
+    font-family: Waiting for the Sunrise;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 50px;
+    color: #00CED1;
+    display: block;
+    margin-bottom: 44px;
+}
+.our__menu-list{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.our__menu-item{
+    width: calc(50% - 42.5px);
+    display: flex;
+    margin-bottom: 42px;
+}
+.our__menu-thumbnail {
+    margin-right: 33px;
+}
+.our__menu-thumbnail .thumbnail__img{
+    border-radius: 100%;
+    margin-top: 25px;
+}
+.our__menu-title{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFFFFF;
+    margin-bottom: 4px;
+}
+.our__menu-text{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+.our__menu-price{
+    font-family: Waiting for the Sunrise;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 93px;
+    color: #00CED1;
+    margin-left: 24px;
+}
+.pricing__tables-title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 50px;
+    color: #433840;
+    margin-bottom: 10px;
+}
+.pricing__tables-subtitle{
+    font-family: Waiting for the Sunrise;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 50px;
+    color: #FF1493;
+    display: block;
+    margin-bottom: 60px;
+}
+
+/* ============== TESTIMONIALS ============== */
+.testimonials{
+    margin-top: 35px;
+    margin-bottom: 105px;
+}
+.testimonials-title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 50px;
+    color: #433840;
+    margin-bottom: 10px;
+}
+.testimonials-subtitle{
+    font-family: Waiting for the Sunrise;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 50px;
+    color: #FF1493;
+    display: block;
+    margin-bottom: 50px;
+}
+.testimonials__slider{
+    max-width: 780px;
+    width: 94%;
+    margin: 0 auto;
+}
+.testy__item{
+    text-align: center;
+}
+.author__name{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #433840;
+    margin-bottom: 14px;
+}
+.author__description{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 25px;
+    color: #9A9A9A;
+    margin-bottom: 10px;
+}
+.author__link{
+    font-family: Waiting for the Sunrise;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 33px;
+    color: #87CEEB;
+}
+.author__link:hover{
+    color: #FF1493;
+}
+.slick-dots{
+    padding-left: 0;
+    list-style: none;
+}
+.testimonials__slider .slick-dots button{
+    font-size: 0;
+    /* text-indent: -99999; - с кнопкой не работает, был бы текст - сработало бы  */
+    padding: 0;
+    background: #E6E6FA;
+    border: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.testimonials__slider .slick-dots .slick-active button{
+    background: #FF1493;
+}
+.testimonials__slider .slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+/* ============== FOOTER ============== */
+.top__footer{
+    background: url(../images/footer.jpg) center center no-repeat;background-size: cover;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-top: 110px;
+}
+.wrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.footer__item{
+    width: calc(33.3% - 13.3px);
+}
+.footer__item-title{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+}
+.footer__item.openning{
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 35px;
+    color: #FFFFFF;
+}
+.footer__item.openning span{
+    color: #DDA0DD;
+}
+strong{
+    font-weight: 700;
+}
+.footer__item.contact__info{
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 35px;
+    color: #FFFFFF;
+}
+.footer__item-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 0;
+    list-style:none;
+}
+.footer__item-feed{
+    width: calc(33.3% - 26px);
+    margin-right: 26px;
+    margin-bottom: 26px;
+}
+.footer__item-link{
+    width: 100%;
+    height:100%;
+    border-radius: 5px;
+}
+.bottom__footer{
+    background: #433840;
+}
+.bottom__footer .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+.bottom__footer-text,
+.bottom__footer-links{
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 35px;
+    color: #FFFFFF;
+}
+.bottom__footer-list{
+    letter-spacing: 10px;
+}
+.bottom__footer-item{
+    display: inline-block;
+}
+.bottom__footer-link,
+.bottom__footer-separator{
+    color: #DDA0DD;
+}
+
+.mobile__nav{
+    display: none;
+}
+
+/* ============== MEDIA QURIES ==============*/
+@media screen and (max-width: 1200px) {
+    .title__two {
+        font-size: 120px;
+        line-height: 120px;
+        left: 6%;
+        top: 45%;
+        transform: rotate(32deg);
+    }    
+    .title__one{
+        font-size: 100px;
+        line-height: 100px;
+        transform: rotate(0deg);
+        right: 32%;
+    }
+    .title__three{
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .option__content{
+        width: 100%;
+        text-align: center;
+    }
+    .box{
+        flex-wrap:wrap;
+    }
+    .option__content article{
+        margin-bottom: 40px;
+    }
+    .option__content:first-child,
+    .option__content:last-child{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .option__content:nth-child(2){
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .home__shop{
+        margin-top: 100px;
+    }
+    .home__subscribe{
+        margin-top: 40px;
+    }
+    .col__left-thumbnail{
+        display: none;
+    }
+    .home__subscribe .container {
+        display: block;
+    }
+    .col__right{
+        margin-bottom: 0;
+        padding: 20px;
+        width: 100%;
+    }
+    .home__subscribe.svg_style::before {
+        height: 90px;
+    }
+    .post__title{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .title__one{
+        font-size: 70px;
+        line-height: 70px;
+        right: 45%;
+    }
+    .title__two{
+        font-size: 85px;
+        line-height: 85px;
+    }
+    .title__three{
+        left: 60%;
+        top: 48%;
+    }
+    .shop__product{
+        padding: 0 10px;
+        width: calc(50% - 13.3px);
+    }
+    .shop__thumbnail{
+        width: 100%;
+        margin: auto;
+    }
+    .our__menu-item {
+        width: 100%;
+    }    
+    .our__menu-thumbnail .thumbnail__img {
+        margin-top: 0px;
+    }  
+    .top__footer{
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .post {
+        width: 100%;
+        text-align: center;
+    } 
+    .post__date {
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    .blog__archive{
+        margin-top: 0;
+    }
+    .footer__item{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .wrapper{
+        flex-wrap:wrap;
+        text-align: center;
+    }
+    .footer__item-link {
+        width: 100px;
+        height: 100px;
+    }
+    .bottom__footer .wrapper {
+        display: block;
+        text-align: center;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 864px) {
+    .title__one {
+        font-size: 50px;
+        line-height: 50px;
+        right: 45%;
+    }
+    .title__two {
+        font-size: 60px;
+        line-height: 60px;
+        transform: rotate(30deg);
+    }
+    .title__three {
+        font-size: 25px;
+        line-height: 25px;
+        line-height: 25px;
+        left: 59%;
+        top: 44%;
+        transform: rotate(60deg);
+    }
+    .testimonials {
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .left__nav,
+    .right__nav{
+        display: none;
+    }
+    .logo{
+        display: block;
+        margin: 20px 0;
+    }
+    .logo__text{
+        font-size: 25px;
+    }
+    .mobile__nav{
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 20px;
+    }
+    .mobile__nav .open{
+        cursor: pointer;
+        font-size: 30px;
+    }
+    .left__nav-item,
+    .right__nav-item{
+        margin: 20px 0;
+    }
+    .left__nav-link,
+    .right__nav-item{
+        font-size: 25px;
+    }
+    .left__nav-link,
+    .right__nav-link{
+        color:#87CEEB;
+    }
+    .top__header .container{
+        flex-direction: column;
+        height: unset;
+    }
+    .mobile{
+        padding-left: 0;
+        display: none;
+    }
+    .svg_style::before,
+    .svg_style::after{
+        display: none;
+    }
+    .title__one{
+        top: 7%;
+        right: 38%;
+    }
+    .title__two{
+        left: 6%;
+        top: 35%;
+        transform: rotate(13deg);
+    }
+    .title__three{
+        left: 75%;
+        top: 23%;
+        transform: rotate(60deg);
+    }
+    .our__menu {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .title__one,
+    .title__two,
+    .title__three{
+        display: none;
+    }
+    .slick-prev,
+    .slick-next{
+        display: none !important;
+    }
+    .shop__product{
+        width: 100%;
+    }
+    .shop__title a{
+        display: block;
+        margin-top: 20px;
+    }
+    .pricing__tables-title,
+    .col__right-title,
+    .home__blog-title,
+    .ourmenu-title,
+    .testimonials-title {
+        font-size: 35px;
+        line-height: 35px;
+    }
+    .pricing__tables-subtitle,
+    .col__right-subtitle,
+    .home__blog-subtitle,
+    .ourmenu-subtitle,
+    .testimonials-title{
+        font-size: 25px;
+        line-height: 45px;
+        margin-bottom: 30px;
+    }
+    .subscribe__email{
+        height: 40px;
+        font-size: 15px;
+        line-height: 22px;
+    }
+    .subscribe__submit{
+        height: 42px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .pricing__tables-subtitl{
+        word-wrap: break-word;
+    }
+    .our__menu-price {
+        font-size: 45px;
+        line-height: 35px;
+    }
+    .our__menu-item {
+        display: block;
+        margin-bottom: 21px;
+        text-align: center;
+    }
+    .our__menu-thumbnail {
+        margin-right: 0px;
+    }
+    .our__menu-price{
+        margin-left: 0;
+    }
+    .our__menu-text{
+        padding: 5px 13px;
+        margin-bottom: 15px;
+    }
+    .testimonials-title {
+        margin-bottom: 0px;
+    }
+    .testimonials-subtitle {
+        margin-bottom: 30px;
+    }
+    .footer__item-title {
+        font-size: 20px;
+    }
+    .top__footer {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .option__content-title{
+        font-size: 22px;
+        line-height: 29px;
+    }
+    .option__content-image{
+        max-width: 100%;
+        margin: auto;
+    }
+    .subscribe{
+        display: block;
+    }
+    .subscribe__submit{
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .pricing__tables-title,
+    .col__right-title,
+    .home__blog-title,
+    .ourmenu-title,
+    .testimonials-title{
+        font-size: 25px;
+        line-height: 25px;
+    }
+    .pricing__tables-subtitle,
+    .col__right-subtitle,
+    .home__blog-subtitle,
+    .ourmenu-subtitle,
+    .testimonials-title{
+        font-size: 20px;
+        line-height: 40px;
+    }
+    .home__shop{
+        margin: 50px 0px 30px;
+    }
+    .home__subscribe{
+        padding: 50px 0px 60px;
+    }
+    .post__text{
+        padding: 5px 13px;
+        margin-bottom: 30px;
+    }
+    .bottom__footer-text, 
+    .bottom__footer-links {
+        font-size: 10px;
+        line-height: 27px;
+    }
+    .bottom__footer-list {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .pricing__tables-subtitle, 
+    .col__right-subtitle {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
